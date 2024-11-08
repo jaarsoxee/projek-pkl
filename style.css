@@ -50,6 +50,18 @@ h2 {
     margin-bottom: 20px;
 }
 
+.profile .me {
+    position: relative;
+}
+
+.profile svg {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    background-color: rgb(255, 38, 38);
+    border-radius: 100%;
+}
+
 .profile .about {
     font-size: 12px;
     font-weight: 400;
