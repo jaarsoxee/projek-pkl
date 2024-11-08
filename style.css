@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F3F3E0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #133E87;
+}
+
+
+h2 {
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+.location {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.location svg {
+    transform: scale(0.6);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+.profile .about {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.skills-and-language {
+    margin-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.skills-and-language p {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.skills, .language {
+    margin-top: 30px;
+}
+
+.timeline {
+    margin-top: 40px;
+    display: flex;
+    column-gap: 25px;
+}
+
+.timeline h4 {
+    margin-right: 25px;
+}
+
+.timeline h5 {
+    position: relative;
+}
+
+.timeline h5::before {
+    background-color: #FA4032;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    content: '';
+    position: absolute;
+    left: -25px;
+}
+
+.timeline p {
+    font-size: 12px;
+}
+
+footer {
+    margin-top: 150px;
+    text-align: center;
+}
+
+/* ELEMENTS */
+.range {
+    position: relative;
+    background-color: #333;
+    width: 300px;
+    height: 30px;
+    transform: skew(30deg);
+    font-family: 'Orbitron', monospace;
+  }
+  .range:before {
+    --width: calc(var(--p) * 1%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #FAB12F;
+    z-index: 0;
+    animation: load 0.5s forwards linear;
+  }
+  .range:after {
+    counter-reset: progress var(--p);
+    content: counter(progress) '%';
+    color: #ffffff;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%) skewX(-30deg);
+    z-index: 1;
+  }
+  .range__label {
+    transform: skew(-30deg) translateY(-100%);
+    line-height: 1.5;
+  }
+  @keyframes load {
+    to {
+      width: var(--width);
+    }
+  }
